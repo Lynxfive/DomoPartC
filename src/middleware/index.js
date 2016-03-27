@@ -1,4 +1,4 @@
-var requireLogin = function(req, res, next) {
+var requiresLogin = function(req, res, next) {
 	
 	if(!req.session.account){
 		return res.redirect('/');
@@ -6,7 +6,7 @@ var requireLogin = function(req, res, next) {
 	next();
 };
 
-var requireLogout = function(req, res, next) {
+var requiresLogout = function(req, res, next) {
 	
 	if(!req.session.account){
 		return res.redirect('/maker');
