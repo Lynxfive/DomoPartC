@@ -28,11 +28,9 @@ var bypassSecure = function(req, res, next){
 module.exports.requiresLogin = requiresLogin;
 module.exports.requiresLogout = requiresLogout;
 
-if(process.env.port.NODE_ENV === "production"){
-	console.log(process.env.port.NODE_ENV)
+if(process.env.NODE_ENV === "production"){
 	module.exports.requiresSecure = requiresSecure;
 }
 else{
-	console.log(process.env.port.NODE_ENV)
 	module.exports.requiresSecure = bypassSecure;
 }
