@@ -1,6 +1,6 @@
 extends ./base.jade
 block append style
-    link(rel="stylesheet", type="text/css", href="/assets/style.css")
+	link(rel="stylesheet", type="text/css", href="/assets/style.css")
 block body
 	nav
 		a(href="/login")
@@ -8,7 +8,7 @@ block body
 		.navlink
 			a(href="/login") Login
 		.navlink
-		a(href="/signup") Sign up
+			a(href="/signup") Sign up
 	section#login
 		form#loginForm(class="mainForm", name="loginForm", action="/login", method="POST")
 			label(for="username") Username: 
