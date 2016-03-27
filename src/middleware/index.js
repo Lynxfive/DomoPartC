@@ -8,7 +8,7 @@ var requiresLogin = function(req, res, next) {
 
 var requiresLogout = function(req, res, next) {
 	
-	if(!req.session.account){
+	if(req.session.account){
 		return res.redirect('/maker');
 	}
 	next();
